@@ -253,6 +253,6 @@ module CountrySelect
     ["Zimbabwe", "zwe"]
   ] unless const_defined?("ISO_COUNTRIES_FOR_SELECT")
 
-  COUNTRIES = Hash[ISO_COUNTRIES_FOR_SELECT.flatten].invert unless const_defined?("COUNTRIES")
+  COUNTRIES = Hash[ISO_COUNTRIES_FOR_SELECT].invert unless const_defined?("COUNTRIES")
   COUNTRIES_FOR_SELECT = ISO_COUNTRIES_FOR_SELECT.map { |c|c[0] } unless const_defined?("COUNTRIES_FOR_SELECT")
 end
