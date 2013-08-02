@@ -42,7 +42,7 @@ module ActionView
       # have to wrap this call in a regular HTML
       # select tag.
       #
-      def country_options_for_select(selected = nil, priority_countries = nil, use_iso_codes = false)
+      def country_options_for_select(selected = nil, priority_countries = nil, use_iso_codes = true)
         country_options = "".html_safe
 
         if priority_countries
@@ -71,9 +71,9 @@ module ActionView
         end
 
         values = if use_iso_codes
-                   ::CountrySelect::ISO_COUNTRIES_FOR_SELECT
-                 else
                    ::CountrySelect::ISO3_COUNTRIES_FOR_SELECT
+                 else
+                   ::CountrySelect::COUNTRIES
                  end
 
         return country_options + options_for_select(values, selected)
