@@ -508,5 +508,5 @@ module CountrySelect
     "zwe" => "Zimbabwe"
   } unless const_defined?("COUNTRIES3")
 
-  ISO3_COUNTRIES_FOR_SELECT = COUNTRIES.invert unless const_defined?("ISO3_COUNTRIES_FOR_SELECT")
+  ISO3_COUNTRIES_FOR_SELECT = COUNTRIES3.invert unless const_defined?("ISO3_COUNTRIES_FOR_SELECT")
 end
