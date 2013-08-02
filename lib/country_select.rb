@@ -73,7 +73,7 @@ module ActionView
         values = if use_iso_codes
                    ::CountrySelect::ISO_COUNTRIES_FOR_SELECT
                  else
-                   ::CountrySelect::COUNTRIES_FOR_SELECT
+                   ::CountrySelect::ISO3_COUNTRIES_FOR_SELECT
                  end
 
         return country_options + options_for_select(values, selected)
