@@ -49,7 +49,7 @@ module ActionView
           priority_countries_options = if use_iso_codes
                                          priority_countries.map do |code|
                                            [
-                                             ::CountrySelect::COUNTRIES[code],
+                                             ::CountrySelect::COUNTRIES3[code],
                                              code
                                            ]
                                          end
@@ -73,7 +73,7 @@ module ActionView
         values = if use_iso_codes
                    ::CountrySelect::ISO3_COUNTRIES_FOR_SELECT
                  else
-                   ::CountrySelect::COUNTRIES
+                   ::CountrySelect::COUNTRIES_FOR_SELECT
                  end
 
         return country_options + options_for_select(values, selected)
